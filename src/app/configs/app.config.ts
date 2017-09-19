@@ -5,7 +5,7 @@ export let APP_CONFIG = new InjectionToken("app.config");
 
 export const AppConfig: IAppConfig = {
     endpoint: {
-        url: "http://localhost:81/",
-        api: "http://localhost:81/api/"
+        url: "http://api.vla.vn/",
+        api: "http://api.vla.vn/api/"
     }
 };
