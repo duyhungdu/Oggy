@@ -8,7 +8,7 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full'
-   
+
 
   },
   {
@@ -17,7 +17,7 @@ export const routes: Routes = [
     data: {
       title: 'Home'
     },
-    
+
     children: [
       {
         path: 'dashboard',
@@ -27,6 +27,11 @@ export const routes: Routes = [
       {
         path: 'product',
         loadChildren: './views/product/product.module#ProductModule',
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'share',
+        loadChildren: './views/share/share.module#ShareModule',
         canActivate: [AuthGuard]
       }
       //,
