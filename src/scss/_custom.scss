@@ -11,3 +11,44 @@
 .table thead th{
     font-size: 12px;
 }
+.table th, .table td{
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+.row-no-padding {
+    [class*="col-"] {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  .data-grid{
+    .btn-outline-primary{
+        border:none;
+        line-height: 15px;
+        font-size: 12px;
+    }
+    .dropdown-toggle::after{
+        content:none;
+    }
+      [class*="center-col"]{
+            text-align: center;
+      }
+      [class*="right-col"]{
+        text-align: right;
+        }
+        [class*="index-col"]{
+            width:30px;
+        }
+        [class*="func-col"]{
+            width:30px;
+        }
+  }
+  .data-grid thead th{
+      text-align: center;
+  }
+  .badge{
+      font-weight: normal;
+  }
+  select.form-control:not([size]):not([multiple]){
+      height: calc(2.09375rem + 1px);
+  }

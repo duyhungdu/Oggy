@@ -1,12 +1,18 @@
 //chrome.exe --remote-debugging-port=9222
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 
 
 import { APP_CONFIG, AppConfig } from './configs';
 import { AuthGuard } from './services';
 import { AuthenticationService } from './services';
+import { APIService } from './services';
 import { AppComponent } from './app.component';
 // Import containers
 import {
@@ -57,7 +63,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
-import { HttpModule } from '@angular/http';
+
+
 
 
 
@@ -72,13 +79,17 @@ import { HttpModule } from '@angular/http';
   imports: [
     HttpModule,
     BrowserModule,
+    CommonModule,
+    FormsModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    NgbModule.forRoot(),
+
   ],
   providers: [AuthGuard,
-    AuthenticationService,
+    AuthenticationService, APIService,
     { provide: APP_CONFIG, useValue: AppConfig },
     { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
