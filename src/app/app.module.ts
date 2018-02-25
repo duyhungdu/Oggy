@@ -15,7 +15,7 @@ import { AuthGuard } from './services';
 import { AuthenticationService } from './services';
 import { APIService } from './services';
 import { AppComponent } from './app.component';
-// Import containers
+// Import containers updated 02/25/2018
 import {
   FullLayout,
   SimpleLayout
